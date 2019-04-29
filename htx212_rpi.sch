@@ -2436,11 +2436,11 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <part name="GND2" library="bt" deviceset="GND" device=""/>
 <part name="X1" library="bt_electromech" deviceset="WIREPAD" device="_22GA" value="MIC"/>
 <part name="X3" library="bt_electromech" deviceset="WIREPAD" device="_22GA" value="PTT"/>
-<part name="X4" library="bt_electromech" deviceset="WIREPAD" device="_22GA" value="7.5V"/>
+<part name="X4" library="bt_electromech" deviceset="WIREPAD" device="_22GA" value="5V"/>
 <part name="X5" library="bt_electromech" deviceset="WIREPAD" device="_22GA" value="GND"/>
 <part name="U$4" library="bt" deviceset="VCC" device="" value="5V"/>
-<part name="X6" library="bt_electromech" deviceset="WIREPAD" device="_22GA" value="MIC"/>
-<part name="X7" library="bt_electromech" deviceset="WIREPAD" device="_22GA" value="SPK"/>
+<part name="X6" library="bt_electromech" deviceset="WIREPAD" device="_22GA" value="SPK"/>
+<part name="X7" library="bt_electromech" deviceset="WIREPAD" device="_22GA" value="MIC"/>
 <part name="X12" library="bt_electromech" deviceset="WIREPAD" device="_22GA" value="SPK"/>
 <part name="X13" library="bt_electromech" deviceset="WIREPAD" device="_22GA" value="GND"/>
 <part name="OK1" library="optocoupler" deviceset="LTV816" device=""/>
@@ -2474,6 +2474,7 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <part name="R12" library="bt_electromech" deviceset="TRIM-" device="CA6V" value="10k"/>
 <part name="GND12" library="bt" deviceset="GND" device=""/>
 <part name="U$3" library="bt" deviceset="BTLOGO" device="-LOGO-MD"/>
+<part name="U$7" library="bt" deviceset="VCC" device="" value="5V"/>
 </parts>
 <sheets>
 <sheet>
@@ -2492,7 +2493,7 @@ RADIO SHACK HTX-212</text>
 <text x="231.14" y="147.32" size="1.778" layer="97" align="bottom-center">MIC JACK</text>
 <text x="228.6" y="114.3" size="1.778" layer="97" align="bottom-center">EXT. SPEAKER</text>
 <text x="149.86" y="17.78" size="3.81" layer="94">APRS Interface</text>
-<text x="233.68" y="17.78" size="3.81" layer="94">0.1</text>
+<text x="233.68" y="17.78" size="3.81" layer="94">0.2</text>
 </plain>
 <instances>
 <instance part="X9" gate="G$1" x="20.32" y="116.84" rot="R180"/>
@@ -2532,7 +2533,7 @@ RADIO SHACK HTX-212</text>
 <instance part="U$1" gate="G$1" x="99.06" y="91.44"/>
 <instance part="R7" gate="G$1" x="88.9" y="73.66" rot="R90"/>
 <instance part="R8" gate="R1" x="119.38" y="63.5"/>
-<instance part="R9" gate="R1" x="91.44" y="111.76" rot="R180"/>
+<instance part="R9" gate="R1" x="101.6" y="132.08" rot="R90"/>
 <instance part="IC1" gate="P" x="119.38" y="76.2"/>
 <instance part="GND7" gate="1" x="119.38" y="53.34"/>
 <instance part="U$6" gate="G$1" x="119.38" y="91.44"/>
@@ -2547,6 +2548,7 @@ RADIO SHACK HTX-212</text>
 <instance part="IC1" gate="B" x="228.6" y="53.34"/>
 <instance part="GND12" gate="1" x="218.44" y="45.72"/>
 <instance part="U$3" gate="G$1" x="2.54" y="2.54"/>
+<instance part="U$7" gate="G$1" x="101.6" y="137.16"/>
 </instances>
 <busses>
 </busses>
@@ -2585,9 +2587,6 @@ RADIO SHACK HTX-212</text>
 <wire x1="78.74" y1="111.76" x2="81.28" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="111.76" x2="81.28" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<pinref part="R9" gate="R1" pin="2"/>
-<wire x1="86.36" y1="111.76" x2="81.28" y2="111.76" width="0.1524" layer="91"/>
-<junction x="81.28" y="111.76"/>
 </segment>
 <segment>
 <pinref part="OK3" gate="G$1" pin="C"/>
@@ -2634,15 +2633,14 @@ RADIO SHACK HTX-212</text>
 <label x="109.22" y="116.84" size="1.778" layer="95" rot="MR0"/>
 <pinref part="PTTLED" gate="LED1" pin="C"/>
 <wire x1="91.44" y1="116.84" x2="91.44" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="116.84" x2="99.06" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="116.84" x2="101.6" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="OK1" gate="G$1" pin="COL"/>
-<wire x1="99.06" y1="116.84" x2="91.44" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="116.84" x2="91.44" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="116.84" x2="91.44" y2="116.84" width="0.1524" layer="91"/>
 <junction x="91.44" y="116.84"/>
 <pinref part="R9" gate="R1" pin="1"/>
-<wire x1="96.52" y1="111.76" x2="99.06" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="111.76" x2="99.06" y2="116.84" width="0.1524" layer="91"/>
-<junction x="99.06" y="116.84"/>
+<wire x1="101.6" y1="127" x2="101.6" y2="116.84" width="0.1524" layer="91"/>
+<junction x="101.6" y="116.84"/>
 </segment>
 <segment>
 <label x="205.74" y="139.7" size="1.778" layer="95"/>
@@ -2690,6 +2688,10 @@ RADIO SHACK HTX-212</text>
 <wire x1="119.38" y1="86.36" x2="119.38" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="86.36" x2="119.38" y2="86.36" width="0.1524" layer="91"/>
 <junction x="119.38" y="86.36"/>
+</segment>
+<segment>
+<pinref part="R9" gate="R1" pin="2"/>
+<pinref part="U$7" gate="G$1" pin="VCC"/>
 </segment>
 </net>
 <net name="PI_IN" class="0">

@@ -158,7 +158,7 @@
 <text x="20.828" y="31.496" size="1.4224" layer="27" font="vector" ratio="10" align="bottom-center">APRS I/F</text>
 <text x="8.128" y="10.16" size="0.8128" layer="27" font="vector" ratio="10" align="bottom-center">cc-by-sa</text>
 <text x="20.828" y="30.226" size="0.8128" layer="27" font="vector" ratio="10" align="bottom-center">www.bot-thoughts.com</text>
-<text x="31.75" y="31.75" size="1.016" layer="27" font="vector" ratio="10">R0.1</text>
+<text x="31.75" y="31.75" size="1.016" layer="27" font="vector" ratio="10">R0.2</text>
 </plain>
 <libraries>
 <library name="bt_electromech">
@@ -661,10 +661,10 @@ Please make sure your boards conform to these design rules.</description>
 </element>
 <element name="X1" library="bt_electromech" package="PAD_22GA" value="MIC" x="38.608" y="12.954" rot="R180"/>
 <element name="X3" library="bt_electromech" package="PAD_22GA" value="PTT" x="38.608" y="18.034" rot="R180"/>
-<element name="X4" library="bt_electromech" package="PAD_22GA" value="7.5V" x="38.608" y="20.574" rot="R180"/>
+<element name="X4" library="bt_electromech" package="PAD_22GA" value="5V" x="38.608" y="20.574" rot="R180"/>
 <element name="X5" library="bt_electromech" package="PAD_22GA" value="GND" x="38.608" y="15.494" rot="R180"/>
-<element name="X6" library="bt_electromech" package="PAD_22GA" value="MIC" x="1.778" y="20.574"/>
-<element name="X7" library="bt_electromech" package="PAD_22GA" value="SPK" x="1.778" y="29.21"/>
+<element name="X6" library="bt_electromech" package="PAD_22GA" value="SPK" x="1.778" y="20.574"/>
+<element name="X7" library="bt_electromech" package="PAD_22GA" value="MIC" x="1.778" y="29.21"/>
 <element name="X12" library="bt_electromech" package="PAD_22GA" value="SPK" x="38.608" y="25.654" rot="R180"/>
 <element name="X13" library="bt_electromech" package="PAD_22GA" value="GND" x="38.608" y="23.114" rot="R180"/>
 <element name="OK1" library="optocoupler" package="DIL04" value="LTV816" x="19.812" y="19.812" smashed="yes" rot="R180">
@@ -741,7 +741,6 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="OK3" pad="2"/>
 <contactref element="OK3" pad="3"/>
 <contactref element="R6" pad="2"/>
-<contactref element="R9" pad="2"/>
 <contactref element="IC1" pad="4"/>
 <contactref element="X2" pad="P$1"/>
 <contactref element="C1" pad="2"/>
@@ -790,9 +789,6 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="C1" pad="1"/>
 <wire x1="37.592" y1="1.778" x2="34.544" y2="1.778" width="0.4064" layer="1"/>
 <wire x1="13.716" y1="2.032" x2="16.256" y2="2.032" width="0.4064" layer="1"/>
-<wire x1="16.256" y1="2.032" x2="17.272" y2="3.048" width="0.4064" layer="1"/>
-<wire x1="17.272" y1="3.048" x2="19.812" y2="3.048" width="0.4064" layer="1"/>
-<wire x1="19.812" y1="3.048" x2="21.082" y2="1.778" width="0.4064" layer="1"/>
 <wire x1="21.082" y1="1.778" x2="22.352" y2="3.048" width="0.4064" layer="1"/>
 <wire x1="22.352" y1="3.048" x2="33.274" y2="3.048" width="0.4064" layer="1"/>
 <wire x1="33.274" y1="3.048" x2="34.544" y2="1.778" width="0.4064" layer="1"/>
@@ -803,6 +799,10 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="39.116" y1="20.574" x2="40.132" y2="19.558" width="0.4064" layer="1"/>
 <wire x1="40.132" y1="19.558" x2="40.132" y2="4.318" width="0.4064" layer="1"/>
 <wire x1="40.132" y1="4.318" x2="37.592" y2="1.778" width="0.4064" layer="1"/>
+<contactref element="R9" pad="2"/>
+<wire x1="21.082" y1="1.778" x2="18.542" y2="1.778" width="0.4064" layer="1"/>
+<wire x1="18.542" y1="1.778" x2="17.272" y2="3.048" width="0.4064" layer="1"/>
+<wire x1="16.256" y1="2.032" x2="17.272" y2="3.048" width="0.4064" layer="1"/>
 </signal>
 <signal name="PI_IN">
 <contactref element="X7" pad="P$1"/>
