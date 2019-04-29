@@ -15,7 +15,12 @@ I built this board for use with a Radio Shack HTX-212 I picked up cheap at a ham
 On the "XCVR" side of the board, solder jumper wires into wire pads labeled SPK/GND, and solder the other ends to a 3.5mm 
 audio jack. Use a 3.5mm audio cable (mono is fine) to connext the radio's external speaker to this SPK jack. Use an RJ45 mic 
 cable in the Mic jack of the radio and connect the 5V, PTT, MIC, and GND wire pads to the appropriate wires per the pinout 
-image above.
+image above and as below.
+
+ * Pin 2 - GND
+ * Pin 5 - MIC
+ * Pin 6 - PTT
+ * Pin 7 - 5V
 
 # Raspberry Pi Hookup
 
