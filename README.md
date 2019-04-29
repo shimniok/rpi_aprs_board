@@ -35,3 +35,21 @@ SPK/GND to another 3.5mm audio jack. Use two 3.5mm audio cables to connect to yo
 mic jack. SPK goes to RPi external speaker jack. Then, solder jumper wire to the DCD and PTT wire pads, and connect to 
 active high pins on the Raspberry Pi. I use GPIO17 and GPIO27. Ground is provided through the audio cables
 
+# Adjusting Audio Levels
+
+Adjust the MIC and SPK potentiometers in the middle. Now boot your Raspberry Pi and turn on your radio with an antenna 
+attached and tune to 144.390MHz (APRS frequency). Launch direwolf after installing and setting up your direwolf.conf per the 
+Direwolf User Guide. For now, disable beaconing.
+
+## Adjust radio output level
+
+Adjust radio volume and the SPK potentiometer until direwolf reports audio level of about 50 for most stations.  
+
+## Adjust radio input level
+
+You'll need an oscilloscope for this. Tune the radio to an unused packet band. Stop direwolf and reconfigure it to transmit 
+every 5 seconds, and restart. Use the oscilloscope probe to display the waveform at the XCVR MIC output wirepad. Adjust the 
+MIC potentiometer as high as it will go without clipping the peak of the signal.
+
+You may need to adjust the Raspberry Pi's output level. Keep in mind that USB audio boards may "forget" alsamixer levels you
+set should the board become unplugged.
